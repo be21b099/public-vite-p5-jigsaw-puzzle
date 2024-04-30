@@ -59,7 +59,7 @@ Follow these instructions to get a copy of the project up and running on your lo
 
 ## Contributing
 
-If you would like to contribute to this project, please follow the [contributing guidelines](https://github.com/be21b099/public-vite-p5-jigsaw-puzzleCONTRIBUTING.md).
+If you would like to contribute to this project, please follow the [contributing guidelines](https://github.com/be21b099/public-vite-p5-jigsaw-puzzle/blob/main/CONTRIBUTING.md).
 
 ## License
-This project is licensed under the APACHE 2.0 License - set the [LICENSE](https://github.com/be21b099/public-vite-p5-jigsaw-puzzle/LICENSE) file for details.
+This project is licensed under the APACHE 2.0 License - set the [LICENSE](https://github.com/be21b099/public-vite-p5-jigsaw-puzzle/blob/main/LICENSE) file for details.
