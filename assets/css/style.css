@@ -1,0 +1,337 @@
+/* General styles */
+html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+body {
+    position: relative;
+    touch-action: none;
+}
+
+.consent-banner {
+    overflow: auto;
+    display: grid;
+    position: absolute;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+/* Canvas styles */
+canvas {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(126, 126, 126, 0.8); /* mobile webkit */
+}
+
+/* Rating container */
+.rating-container {
+    margin-top: 5px;
+}
+
+/* Font styles */
+.material-symbols-rounded {
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+}
+
+.material-symbols-filled {
+    font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48;
+}
+
+/* Textarea styles */
+.textarea {
+    border: 1px solid #ccc;
+    background-color: rgba(126, 126, 126, 0.2);
+    font-family: inherit;
+    font-size: inherit;
+    margin: 5px 0 0 0;
+    padding: 1px 6px;
+    display: block;
+    width: 96%;
+    overflow: hidden;
+    min-height: 100px;
+    max-height: 5em;
+    line-height: 20px;
+}
+
+.textarea[contenteditable]:empty::before {
+    content: "Add your personalized comment...";
+    color: gray;
+}
+
+/* UI styles */
+.ui {
+    position: absolute;
+    transition: .25s all;
+    z-index: 10;
+}
+
+.ui-popup {
+    background: #F1F1F1;
+    border-radius: 10px;
+    border: 1px solid black;
+    text-align: center;
+    max-width: 600px;
+    transform: translateY(0px);
+    transition: all .5s;
+}
+
+.disabled {
+    pointer-events: none;
+    display: none;
+    opacity: 0;
+}
+
+.disabled * {
+    display: none;
+}
+
+.ui-container {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: .25s all;
+}
+
+.ui-popup-container,
+.ui-popup-container-report,
+.ui-popup-container-quit,
+.ui-popup-container-settings {
+    display: flex;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .25);
+    transition: 1s all;
+}
+
+/* Button styles */
+button[type="button"] {
+    color: #FFFFFF;
+    background: #7E7E7E;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: .25s all;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+button[type="button"]:disabled {
+    color: #7E7E7E;
+    background: #F1F1F1;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border: thin solid #7E7E7E;
+    cursor: pointer;
+    transition: .25s all;
+
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+
+/* Functionality styles */
+.functionality {
+    display: flex;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: #7E7E7E;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: .25s all;
+    margin-top: 10px;
+}
+
+.functionality:hover,
+button[type="button"]:hover {
+    background: rgba(126, 126, 126, 0.8);
+    transition: .10s all;
+}
+
+.functionality:active,
+button[type="button"]:active {
+    background: #9F9F9F;
+}
+
+/* Section styles */
+.section {
+    margin: 25px;
+}
+
+.section.container {
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin: 0px 0px 1em;
+}
+
+/* Input styles */
+.rating-container label input[type="radio"] {
+    display: none;
+    font-size: inherit;
+}
+
+label {
+    cursor: pointer;
+}
+
+input[type="text"] {
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid rgb(126, 126, 126);
+    background-color: rgba(126, 126, 126, 0.2);
+    outline: none;
+    font-family: inherit;
+}
+
+input#url {
+    user-select: all;
+}
+
+input#cols,
+input#rows {
+    margin-top: 10px;
+    position: relative;
+    width: 30%;
+}
+
+/* Input number styles */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+/* Copy button styles */
+button[type="button"].copy {
+    padding: 8px 9px;
+}
+
+/* Anchor styles */
+a {
+    color: #00577C;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+#again > .tooltip-content{
+    top: calc(100% + 5px); /* Display below the button */
+    left: 50%; /* Center the tooltip horizontally */
+    transform: translateX(-50%); /* Center the tooltip horizontally */
+}
+
+#again > .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #7E7E7E transparent;
+}
+
+
+
+.tooltip .tooltip-content {
+    visibility: hidden;
+    width: 120px;
+    background-color: #7E7E7E;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: calc(25% + 3px);
+    right: 120%;
+}
+
+.tooltip .tooltip-content::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #7E7E7E;
+}
+
+.tooltip:hover .tooltip-content {
+    visibility: visible;
+}
+
+/* Touch screen styles */
+@media (hover: none) {
+    .tooltip .tooltip-content {
+        display: none;
+    }
+
+    .functionality:hover,
+    input[type="button"]:hover,
+    .functionality:active,
+    input[type="button"]:active {
+        background: #7E7E7E;
+    }
+}

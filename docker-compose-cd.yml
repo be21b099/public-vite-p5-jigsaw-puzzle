@@ -1,0 +1,7 @@
+version: "3.3"
+services:
+  backend:
+    image: <your url here>
+    ports:
+      - 8654:8080
+    restart: unless-stopped
